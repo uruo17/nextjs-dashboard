@@ -1,0 +1,29 @@
+{
+    "name": "Next.js Development Container",
+    "build": {
+        "context": "..",
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "18"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "esbenp.prettier-vscode"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.formatOnSave": true
+            }
+        }
+    },
+    "forwardPorts": [
+        3000
+    ],
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind",
+        "source=node_modules,target=/workspace/node_modules,type=volume"
+    ]
+}
