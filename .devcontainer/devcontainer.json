@@ -24,6 +24,7 @@
     ],
     "mounts": [
         "source=${localWorkspaceFolder},target=/workspace,type=bind",
-        "source=node_modules,target=/workspace/node_modules,type=volume"
+        "source=node_modules,target=/workspace/node_modules,type=volume",
+        "source=pnpm-store,target=/workspaces/nextjs-dashboard/.pnpm-store,type=volume"
     ]
 }
